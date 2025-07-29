@@ -85,7 +85,7 @@ export default function BookService() {
     const selectedDate = e.target.value;
     setForm((prev) => ({ ...prev, date: selectedDate }));
     try {
-      const res = await fetch(`http://localhost:5000/api/slot/slots?date=${selectedDate}`);
+      const res = await fetch(`https://ashe-beauty-backend.onrender.com/api/slot/slots?date=${selectedDate}`);
       const data = await res.json();
       setAvailableSlots(data.availableSlots); 
       setAvailableSlotTimes(data.availableSlotTimes);
@@ -108,7 +108,7 @@ export default function BookService() {
    const checkSlotAvailability = async () => {
     setIsCheckingSlot(true);
     try {
-      const res = await fetch("http://localhost:5000/api/appointments/check-slot", {
+      const res = await fetch("https://ashe-beauty-backend.onrender.com/api/appointments/check-slot", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -157,7 +157,7 @@ const handleClose = () => {
 const handleSubmit = async (reference) => {
 
   try {
-    const res = await fetch("http://localhost:5000/api/appointments/book", {
+    const res = await fetch("https://ashe-beauty-backend.onrender.com/api/appointments/book", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

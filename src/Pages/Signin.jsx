@@ -30,7 +30,7 @@ export default function Signin() {
     e.preventDefault();
 
     try {
-      const res = await fetch("http://localhost:5000/api/auth/signin", {
+      const res = await fetch("https://ashe-beauty-backend.onrender.com/api/auth/signin", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(form),

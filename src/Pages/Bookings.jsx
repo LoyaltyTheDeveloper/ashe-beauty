@@ -15,7 +15,7 @@ const Bookings = () => {
     const fetchAppointments = async () => {
          setIsLoading(true);
       try {
-        const res = await fetch("http://localhost:5000/api/appointments/user",
+        const res = await fetch("https://ashe-beauty-backend.onrender.com/api/appointments/user",
             { headers: { Authorization: `Bearer ${token}` } }
         );
          const data = await res.json();

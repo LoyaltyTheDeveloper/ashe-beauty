@@ -15,7 +15,7 @@ useEffect(() => {
   const fetchServices = async () => {
     setIsLoading(true);
     try {
-      const res = await fetch('http://localhost:5000/api/services/getservices');
+      const res = await fetch('https://ashe-beauty-backend.onrender.com/api/services/getservices'); 
       const data = await res.json();
       setServices(data);
     } catch (err) {
@@ -84,7 +84,7 @@ useEffect(() => {
         >
           <div className="relative w-full mb-6 overflow-hidden rounded-xl">
             <img
-              src={`http://localhost:5000${service.image}`}
+              src={`https://ashe-beauty-backend.onrender.com${service.image}`}
               alt={service.name}
               className="w-full h-56 object-cover group-hover:scale-110 transition-transform duration-500"
             />

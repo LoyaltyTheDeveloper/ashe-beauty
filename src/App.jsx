@@ -4,7 +4,6 @@ import Landing from './Pages/Landing';
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Signin from './Pages/Signin';
 import Signup from './Pages/Signup';
-import AddService from './Pages/AddService';
 import Services from './Pages/Services';
 import BookService from './Pages/BookService';
 import { Toaster } from 'react-hot-toast';
@@ -21,8 +20,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Landing />} />
         <Route path="/signin" element={<Signin />} />
-        <Route path="/signup" element={<Signup />} />
-         <Route path="/addservice" element={<AddService />} />
+        <Route path="/signup" element={<Signup />} />     
           <Route path="/services" element={<Services />} />
            <Route path="/bookservice" element={<BookService />} />
            <Route path="/services/:id" element={<SubServices />} />
